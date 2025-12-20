@@ -1,0 +1,72 @@
+track
+<- sc_node_class;
+-> track_2;;
+
+
+// путь для поезда 2
+track_2
+-> rrel_1: track_2_2_3;
+-> rrel_2: track_2_3_5;
+-> rrel_3: track_2_5_6;
+-> rrel_4: track_2_6_9;
+-> rrel_5: track_2_9_12;;
+
+
+track_2_2_3
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 20 (* <- concept_time;; *);;
+	=> nrel_max_time: 35 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_2;
+-> rrel_2: station_3;;
+
+
+track_2_3_5
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 33 (* <- concept_time;; *);;
+	=> nrel_max_time: 50 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_3;
+-> rrel_2: station_5;;
+
+
+track_2_5_6
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 25 (* <- concept_time;; *);;
+	=> nrel_max_time: 40 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_5;
+-> rrel_2: station_6;;
+
+
+track_2_6_9
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 38 (* <- concept_time;; *);;
+	=> nrel_max_time: 55 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_6;
+-> rrel_2: station_9;;
+
+
+track_2_9_12
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 38 (* <- concept_time;; *);;
+	=> nrel_max_time: 55 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_9;
+-> rrel_2: station_12;;

@@ -1,0 +1,126 @@
+train_3
+=> nrel_actual:
+	actual_train_3;
+=> nrel_normative:
+	normative_train_3;;
+
+
+actual_train_3
+-> rrel_previous:
+	train_3_at_station_2;
+-> rrel_previous:
+	train_3_at_station_4;
+-> rrel_last:
+	train_3_at_station_6;;
+
+
+
+// фактическое расписание
+
+train_3_at_station_2
+=> nrel_arrived:
+	station_2;
+=> nrel_time:
+	09.05 (* <- concept_time;; *);;
+
+train_3_at_station_4
+=> nrel_arrived:
+	station_4;
+=> nrel_time:
+	09.42 (* <- concept_time;; *);;
+
+train_3_at_station_6
+=> nrel_arrived:
+	station_6;
+=> nrel_time:
+	10.18 (* <- concept_time;; *);;
+
+
+
+
+// нормативное расписание
+normative_train_3
+=> nrel_track: track_3;
+-> rrel_1: train_3_at_station_2;
+-> rrel_2: train_3_at_station_4;
+-> rrel_3: train_3_at_station_6;
+-> rrel_4: train_3_at_station_7;
+-> rrel_5: train_3_at_station_9;
+-> rrel_6: train_3_at_station_11;
+-> rrel_7: train_3_at_station_12;
+-> rrel_8: train_3_at_station_14;;
+
+
+// нормативные времена
+
+train_3_at_station_2
+=> nrel_normative_time:
+	09.00 (* <- concept_time;; *);
+=> nrel_station:
+	station_2;
+=> nrel_priority: 3;
+=> nrel_direction: forward_direction;;
+
+
+train_3_at_station_4
+=> nrel_normative_time:
+	09.40 (* <- concept_time;; *);
+=> nrel_station:
+	station_4;
+=> nrel_priority: 2;
+=> nrel_direction: forward_direction;;
+
+
+train_3_at_station_6
+=> nrel_normative_time:
+	10.15 (* <- concept_time;; *);
+=> nrel_station:
+	station_6;
+=> nrel_priority: 4;
+=> nrel_direction: forward_direction;;
+
+
+train_3_at_station_7
+=> nrel_normative_time:
+	10.42 (* <- concept_time;; *);
+=> nrel_station:
+	station_7;
+=> nrel_priority: 1;
+=> nrel_direction: forward_direction;;
+
+
+train_3_at_station_9
+=> nrel_normative_time:
+	11.20 (* <- concept_time;; *);
+=> nrel_station:
+	station_9;
+=> nrel_priority: 5;
+=> nrel_direction: forward_direction;;
+
+
+train_3_at_station_11
+=> nrel_normative_time:
+	11.55 (* <- concept_time;; *);
+=> nrel_station:
+	station_11;
+=> nrel_priority: 2;
+=> nrel_direction: forward_direction;;
+
+
+train_3_at_station_12
+=> nrel_normative_time:
+	12.23 (* <- concept_time;; *);
+=> nrel_station:
+	station_12;
+=> nrel_priority: 3;
+=> nrel_direction: forward_direction;;
+
+
+train_3_at_station_14
+=> nrel_normative_time:
+	12.50 (* <- concept_time;; *);
+=> nrel_station:
+	station_14;
+=> nrel_priority: 6;
+=> nrel_direction: forward_direction;;
+

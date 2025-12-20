@@ -1,0 +1,57 @@
+forecast_schedule
+-> for_station_1;
+-> for_station_2;
+-> for_station_3;
+-> for_station_4;
+-> for_station_5;
+-> for_station_6;
+-> for_station_7;
+-> for_station_8;
+-> for_station_9;
+-> for_station_10;
+-> for_station_11;
+-> for_station_12;
+-> for_station_13;
+-> for_station_14;;
+
+for_station_1
+=> nrel_station: station_1;;
+
+for_station_2
+=> nrel_station: station_2;;
+
+for_station_3
+=> nrel_station: station_3;;
+
+for_station_4
+=> nrel_station: station_4;;
+
+for_station_5
+=> nrel_station: station_5;;
+
+for_station_6
+=> nrel_station: station_6;;
+
+for_station_7
+=> nrel_station: station_7;;
+
+for_station_8
+=> nrel_station: station_8;;
+
+for_station_9
+=> nrel_station: station_9;;
+
+for_station_10
+=> nrel_station: station_10;;
+
+for_station_11
+=> nrel_station: station_11;;
+
+for_station_12
+=> nrel_station: station_12;;
+
+for_station_13
+=> nrel_station: station_13;;
+
+for_station_14
+=> nrel_station: station_14;;

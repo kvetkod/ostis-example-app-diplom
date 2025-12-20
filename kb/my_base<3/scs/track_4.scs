@@ -1,0 +1,97 @@
+track
+<- sc_node_class;
+-> track_4;;
+
+
+track_4
+-> rrel_1: track_4_14_13;
+-> rrel_2: track_4_13_11;
+-> rrel_3: track_4_11_9;
+-> rrel_4: track_4_9_8;
+-> rrel_5: track_4_8_5;
+-> rrel_6: track_4_5_3;
+-> rrel_7: track_4_3_1;;
+
+
+track_4_14_13
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 28 (* <- concept_time;; *);;
+	=> nrel_max_time: 40 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_14;
+-> rrel_2: station_13;;
+
+
+track_4_13_11
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 32 (* <- concept_time;; *);;
+	=> nrel_max_time: 48 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_13;
+-> rrel_2: station_11;;
+
+
+track_4_11_9
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 30 (* <- concept_time;; *);;
+	=> nrel_max_time: 45 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_11;
+-> rrel_2: station_9;;
+
+
+track_4_9_8
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 25 (* <- concept_time;; *);;
+	=> nrel_max_time: 38 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_9;
+-> rrel_2: station_8;;
+
+
+track_4_8_5
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 35 (* <- concept_time;; *);;
+	=> nrel_max_time: 52 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_8;
+-> rrel_2: station_5;;
+
+
+track_4_5_3
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 33 (* <- concept_time;; *);;
+	=> nrel_max_time: 50 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_5;
+-> rrel_2: station_3;;
+
+
+track_4_3_1
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 30 (* <- concept_time;; *);;
+	=> nrel_max_time: 45 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_3;
+-> rrel_2: station_1;;

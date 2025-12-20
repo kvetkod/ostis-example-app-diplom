@@ -1,0 +1,102 @@
+track
+<- sc_node_class;
+-> track_10;;
+
+// для маршрута поезда 10
+track_10
+-> rrel_1: track_10_1_2;
+-> rrel_2: track_10_2_5;
+-> rrel_3: track_10_5_6;
+-> rrel_4: track_10_6_7;
+-> rrel_5: track_10_7_8;
+-> rrel_6: track_10_8_9;
+-> rrel_7: track_10_9_12;
+-> rrel_8: track_10_12_14;;
+
+track_10_1_2
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: cargo_train;;
+	=> nrel_time: 38 (* <- concept_time;; *);;
+	=> nrel_max_time: 50 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_1;
+-> rrel_2: station_2;;
+
+track_10_2_5
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: cargo_train;;
+	=> nrel_time: 55 (* <- concept_time;; *);;
+	=> nrel_max_time: 60 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_2;
+-> rrel_2: station_5;;
+
+track_10_5_6
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: cargo_train;;
+	=> nrel_time: 34 (* <- concept_time;; *);;
+	=> nrel_max_time: 46 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_5;
+-> rrel_2: station_6;;
+
+track_10_6_7
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: cargo_train;;
+	=> nrel_time: 26 (* <- concept_time;; *);;
+	=> nrel_max_time: 42 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_6;
+-> rrel_2: station_7;;
+
+track_10_7_8
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: cargo_train;;
+	=> nrel_time: 28 (* <- concept_time;; *);;
+	=> nrel_max_time: 40 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_7;
+-> rrel_2: station_8;;
+
+track_10_8_9
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: cargo_train;;
+	=> nrel_time: 25 (* <- concept_time;; *);;
+	=> nrel_max_time: 38 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_8;
+-> rrel_2: station_9;;
+
+track_10_9_12
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: cargo_train;;
+	=> nrel_time: 48 (* <- concept_time;; *);;
+	=> nrel_max_time: 60 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_9;
+-> rrel_2: station_12;;
+
+track_10_12_14
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: cargo_train;;
+	=> nrel_time: 30 (* <- concept_time;; *);;
+	=> nrel_max_time: 45 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_12;
+-> rrel_2: station_14;;

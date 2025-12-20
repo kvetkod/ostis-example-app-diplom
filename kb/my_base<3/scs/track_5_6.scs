@@ -1,0 +1,138 @@
+track
+<- sc_node_class;
+-> track_5;;
+
+track_5
+-> rrel_1: track_5_8_7;
+-> rrel_2: track_5_7_6;
+-> rrel_3: track_5_6_5;
+-> rrel_4: track_5_5_4;
+-> rrel_5: track_5_4_3;
+-> rrel_6: track_5_3_2;
+-> rrel_7: track_5_2_1;;
+
+track_5_8_7
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 30 (* <- concept_time;; *);;
+	=> nrel_max_time: 42 (* <- concept_time;; *);;
+*);
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: cargo_train;;
+	=> nrel_time: 35 (* <- concept_time;; *);;
+	=> nrel_max_time: 48 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_8;
+-> rrel_2: station_7;;
+
+track_5_7_6
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 28 (* <- concept_time;; *);;
+	=> nrel_max_time: 40 (* <- concept_time;; *);;
+*);
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: cargo_train;;
+	=> nrel_time: 33 (* <- concept_time;; *);;
+	=> nrel_max_time: 46 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_7;
+-> rrel_2: station_6;;
+
+track_5_6_5
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 30 (* <- concept_time;; *);;
+	=> nrel_max_time: 42 (* <- concept_time;; *);;
+*);
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: cargo_train;;
+	=> nrel_time: 35 (* <- concept_time;; *);;
+	=> nrel_max_time: 48 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_6;
+-> rrel_2: station_5;;
+
+track_5_5_4
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 30 (* <- concept_time;; *);;
+	=> nrel_max_time: 42 (* <- concept_time;; *);;
+*);
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: cargo_train;;
+	=> nrel_time: 35 (* <- concept_time;; *);;
+	=> nrel_max_time: 48 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_5;
+-> rrel_2: station_4;;
+
+track_5_4_3
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 30 (* <- concept_time;; *);;
+	=> nrel_max_time: 42 (* <- concept_time;; *);;
+*);
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: cargo_train;;
+	=> nrel_time: 35 (* <- concept_time;; *);;
+	=> nrel_max_time: 48 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_4;
+-> rrel_2: station_3;;
+
+track_5_3_2
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 30 (* <- concept_time;; *);;
+	=> nrel_max_time: 42 (* <- concept_time;; *);;
+*);
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: cargo_train;;
+	=> nrel_time: 35 (* <- concept_time;; *);;
+	=> nrel_max_time: 48 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_3;
+-> rrel_2: station_2;;
+
+track_5_2_1
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: passanger_train;;
+	=> nrel_time: 30 (* <- concept_time;; *);;
+	=> nrel_max_time: 42 (* <- concept_time;; *);;
+*);
+-> ...
+(*
+	<- sc_node_tuple;;
+	=> nrel_train_type: cargo_train;;
+	=> nrel_time: 35 (* <- concept_time;; *);;
+	=> nrel_max_time: 48 (* <- concept_time;; *);;
+*);
+-> rrel_1: station_2;
+-> rrel_2: station_1;;

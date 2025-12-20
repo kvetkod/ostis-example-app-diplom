@@ -1,0 +1,128 @@
+train_6
+=> nrel_actual:
+	actual_train_6;
+=> nrel_normative:
+	normative_train_6;;
+
+
+actual_train_6
+-> rrel_previous:
+	train_6_at_station_8;
+-> rrel_previous:
+	train_6_at_station_7;
+-> rrel_previous:
+	train_6_at_station_6;
+-> rrel_last:
+	train_6_at_station_5;;
+
+
+train_6_at_station_8
+=> nrel_arrived:
+	station_8;
+=> nrel_time:
+	8.05 (* <- concept_time;; *);;
+
+
+train_6_at_station_7
+=> nrel_arrived:
+	station_7;
+=> nrel_time:
+	8.40 (* <- concept_time;; *);;
+
+
+train_6_at_station_6
+=> nrel_arrived:
+	station_6;
+=> nrel_time:
+	9.15 (* <- concept_time;; *);;
+
+
+train_6_at_station_5
+=> nrel_arrived:
+	station_5;
+=> nrel_time:
+	9.50 (* <- concept_time;; *);;
+
+
+normative_train_6
+=> nrel_track: track_5;
+-> rrel_1: train_6_at_station_8;
+-> rrel_2: train_6_at_station_7;
+-> rrel_3: train_6_at_station_6;
+-> rrel_4: train_6_at_station_5;
+-> rrel_5: train_6_at_station_4;
+-> rrel_6: train_6_at_station_3;
+-> rrel_7: train_6_at_station_2;
+-> rrel_8: train_6_at_station_1;;
+
+
+train_6_at_station_8
+=> nrel_normative_time:
+	8.05 (* <- concept_time;; *);
+=> nrel_station:
+	station_8;
+=> nrel_priority: 2;
+=> nrel_direction: reverse_direction;;
+
+
+train_6_at_station_7
+=> nrel_normative_time:
+	8.40 (* <- concept_time;; *);
+=> nrel_station:
+	station_7;
+=> nrel_priority: 8;
+=> nrel_direction: reverse_direction;;
+
+
+train_6_at_station_6
+=> nrel_normative_time:
+	9.15 (* <- concept_time;; *);
+=> nrel_station:
+	station_6;
+=> nrel_priority: 1;
+=> nrel_direction: reverse_direction;;
+
+
+train_6_at_station_5
+=> nrel_normative_time:
+	9.50 (* <- concept_time;; *);
+=> nrel_station:
+	station_5;
+=> nrel_priority: 8;
+=> nrel_direction: reverse_direction;;
+
+
+train_6_at_station_4
+=> nrel_normative_time:
+	10.20 (* <- concept_time;; *);
+=> nrel_station:
+	station_4;
+=> nrel_priority: 1;
+=> nrel_direction: reverse_direction;;
+
+
+train_6_at_station_3
+=> nrel_normative_time:
+	10.50 (* <- concept_time;; *);
+=> nrel_station:
+	station_3;
+=> nrel_priority: 5;
+=> nrel_direction: reverse_direction;;
+
+
+train_6_at_station_2
+=> nrel_normative_time:
+	11.15 (* <- concept_time;; *);
+=> nrel_station:
+	station_2;
+=> nrel_priority: 2;
+=> nrel_direction: reverse_direction;;
+
+
+train_6_at_station_1
+=> nrel_normative_time:
+	11.50 (* <- concept_time;; *);
+=> nrel_station:
+	station_1;
+=> nrel_priority: 4;
+=> nrel_direction: reverse_direction;;

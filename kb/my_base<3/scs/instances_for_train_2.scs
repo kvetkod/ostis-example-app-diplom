@@ -1,0 +1,131 @@
+train_2
+=> nrel_actual:
+	actual_train_2;
+=> nrel_normative:
+	normative_train_2;;
+
+
+actual_train_2
+-> rrel_previous:
+	train_2_at_station_2;
+-> rrel_previous:
+	train_2_at_station_3;
+-> rrel_previous:
+	train_2_at_station_5;
+-> rrel_last:
+	train_2_at_station_6;;
+
+
+// поезд 2 был на остановке 2 во время 08.12
+train_2_at_station_2
+=> nrel_arrived:
+	station_2;
+=> nrel_time:
+	08.12 (* <- concept_time;; *);;
+
+
+// поезд 2 был на остановке 3 во время 08.32
+train_2_at_station_3
+=> nrel_arrived:
+	station_3;
+=> nrel_time:
+	08.32 (* <- concept_time;; *);;
+
+
+// поезд 2 был на остановке 5 во время 09.08
+train_2_at_station_5
+=> nrel_arrived:
+	station_5;
+=> nrel_time:
+	09.08 (* <- concept_time;; *);;
+
+
+// поезд 2 был на остановке 6 во время 09.33
+train_2_at_station_6
+=> nrel_arrived:
+	station_6;
+=> nrel_time:
+	09.33 (* <- concept_time;; *);;
+
+
+// для нормативного расписания поезда 2 входят остановки по маршруту
+normative_train_2
+=> nrel_track: track_2;
+-> rrel_1: train_2_at_station_2;
+-> rrel_2: train_2_at_station_3;
+-> rrel_3: train_2_at_station_5;
+-> rrel_4: train_2_at_station_6;
+-> rrel_5: train_2_at_station_9;
+-> rrel_6: train_2_at_station_12;;
+
+
+// на остановке 2 поезд 2 должен быть в 08.10
+train_2_at_station_2
+=> nrel_normative_time:
+	08.10 (* <- concept_time;; *);
+=> nrel_station:
+	station_2;
+=> nrel_priority: 5;
+=> nrel_direction:
+	forward_direction;;
+
+
+
+// на остановке 3 поезд 2 должен быть в 08.30
+train_2_at_station_3
+=> nrel_normative_time:
+	08.30 (* <- concept_time;; *);
+=> nrel_station:
+	station_3;
+=> nrel_priority: 7;
+=> nrel_direction:
+	forward_direction;;
+
+
+
+// на остановке 5 поезд 2 должен быть в 09.05
+train_2_at_station_5
+=> nrel_normative_time:
+	09.05 (* <- concept_time;; *);
+=> nrel_station:
+	station_5;
+=> nrel_priority: 4;
+=> nrel_direction:
+	forward_direction;;
+
+
+
+// на остановке 6 поезд 2 должен быть в 09.30
+train_2_at_station_6
+=> nrel_normative_time:
+	09.30 (* <- concept_time;; *);
+=> nrel_station:
+	station_6;
+=> nrel_priority: 6;
+=> nrel_direction:
+	forward_direction;;
+
+
+
+// на остановке 9 поезд 2 должен быть в 10.10
+train_2_at_station_9
+=> nrel_normative_time:
+	10.10 (* <- concept_time;; *);
+=> nrel_station:
+	station_9;
+=> nrel_priority: 3;
+=> nrel_direction:
+	forward_direction;;
+
+
+
+// на остановке 12 поезд 2 должен быть в 10.50
+train_2_at_station_12
+=> nrel_normative_time:
+	10.50 (* <- concept_time;; *);
+=> nrel_station:
+	station_12;
+=> nrel_priority: 8;
+=> nrel_direction:
+	forward_direction;;
+

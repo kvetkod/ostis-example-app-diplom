@@ -1,0 +1,220 @@
+train // класс поезд, имеет в себе экземпляр поезд
+<- sc_node_class;
+-> passanger_train;
+-> cargo_train;;
+
+passanger_train
+-> train_1;
+-> train_2;
+-> train_3;
+-> train_4;
+-> train_5;;
+
+cargo_train
+-> train_6;
+-> train_7;
+-> train_8;
+-> train_9;
+-> train_10;;
+
+schedule // класс расписание, делится на 2 класса - нормативное расписание и актуальное расписание (нормативное свыше, актуальное как есть на самом деле)
+<- sc_node_class;
+-> normative_schedule;
+-> actual_schedule;
+-> forecast_schedule;;
+
+forecast_schedule
+<- sc_node_class;;
+
+
+normative_schedule // класс нормативное расписание, имеет в себе экземпляр "нормативное расписание для поезда 1"
+<- sc_node_class;
+-> normative_train_1;
+-> normative_train_2;
+-> normative_train_3;
+-> normative_train_4;
+-> normative_train_5;
+-> normative_train_6;
+-> normative_train_7;
+-> normative_train_8;
+-> normative_train_9;
+-> normative_train_10;;
+
+actual_schedule  // класс актуальное расписание, имеет в себе экземпляр "актуальное расписание для поезда 1"
+<- sc_node_class;
+-> actual_train_1;
+-> actual_train_2;
+-> actual_train_3;
+-> actual_train_4;
+-> actual_train_5;
+-> actual_train_6;
+-> actual_train_7;
+-> actual_train_8;
+-> actual_train_9;
+-> actual_train_10;;
+
+station // класс станция, имеет в себе экземпляры "станция_1", "станция_2" и т.д.
+<- sc_node_class;
+-> station_1;
+-> station_2;
+-> station_3;
+-> station_4;
+-> station_5;
+-> station_6;
+-> station_7;
+-> station_8;
+-> station_9;
+-> station_10;
+-> station_11;
+-> station_12;
+-> station_13;
+-> station_14;;
+
+
+train_at_station // класс "на станции", т.е. экземпляры класса, которые фиксируют когда поезд был(для актуального расписания) или когда будет (для нормативного) на станции 
+<- sc_node_class;
+-> train_1_at_station_1;
+-> train_1_at_station_2;
+-> train_1_at_station_3;
+-> train_1_at_station_4;
+-> train_1_at_station_5;
+-> train_1_at_station_6;
+-> train_2_at_station_5;
+-> train_2_at_station_6;
+-> train_2_at_station_7;
+-> train_2_at_station_8;;
+
+concept_time // класс время
+<- sc_node_class;;
+
+nrel_actual // отношение "имеет актуальное расписание", поезд(первый домен) -> имеет актуальное расписание(отношение) -> актуальное расписание(второй домен)
+<- sc_node_norole_relation;
+=> nrel_first_domain:
+	train;
+=> nrel_second_domain:
+	actual_schedule;;
+
+nrel_normative // отношение "имеет нормативное расписание", поезд(первый домен) -> имеет нормативное расписание(отношение) -> актуальное расписание(второй домен)
+<- sc_node_norole_relation;
+=> nrel_first_domain:
+	train;
+=> nrel_second_domain:
+	normative_schedule;;
+
+nrel_time // отношение "имеет время", на остановке(первый домен) -> был в какое время?(отношение) -> время(второй домен) - для актуального расписания
+<- sc_node_norole_relation;
+=> nrel_first_domain:
+	train_at_station;
+=> nrel_second_domain:
+	concept_time;;
+	
+nrel_normative_time // отношение "будет время", на остановке(первый домен) -> будет в какое время?(отношение) -> время(второй домен) - для нормативного расписания
+<- sc_node_norole_relation;
+=> nrel_first_domain:
+	train_at_station;
+=> nrel_second_domain:
+	concept_time;;
+
+nrel_arrived // отношение "прибыл", на остановку(первый домен) -> на какую остановку прибыл поезд(отношение) -> остановка(второй домен) - это для актуального расписания
+<- sc_node_norole_relation;
+=> nrel_first_domain:
+	train_at_station;
+=> nrel_second_domain:
+	station;;
+
+nrel_station /* отношение "должен быть на остановке", на остановке(первый домен) -> на какой остановке должен быть поезд (отношение) -> остановка(второй домен) - это для нормативного расписание */
+<- sc_node_norole_relation;
+=> nrel_first_domain:
+	train_at_station;
+=> nrel_second_domain:
+	station;;
+
+rrel_last // отношение "последняя остановка", в актуальном расписании(первый домен) -> последняя остановка была на какой остановке?(отношение) -> на остановке(второй домен)
+<- sc_node_role_relation;
+=> nrel_first_domain:
+	actual_schedule;
+=> nrel_second_domain:
+	train_at_station;;
+	
+rrel_previous // отношение "предыдущая остановка", в актуальном расписании(первый домен) -> предыдущая остановка(отношение) -> на остановке(второй домен) 
+<- sc_node_role_relation;
+=> nrel_first_domain:
+	actual_schedule;
+=> nrel_second_domain:
+	train_at_station;;
+	
+nrel_train_type
+<- sc_node_norole_relation;
+=> nrel_first_domain:
+	track;
+=> nrel_second_domain:
+	train;;
+	
+	
+nrel_track
+<- sc_node_norole_relation;
+=> nrel_first_domain:
+	normative_schedule;
+=> nrel_second_domain:
+	track;;
+	
+	
+nrel_stop_time
+<- sc_node_norole_relation;
+=> nrel_first_domain:
+	station;
+=> nrel_second_domain:
+	concept_time;;
+	
+
+line
+<- sc_node_class;;
+
+nrel_line
+<- sc_node_norole_relation;
+=> nrel_first_domain:
+	station;
+=> nrel_second_domain:
+	line;;
+	
+nrel_schedule
+<- sc_node_norole_relation;;
+
+
+direction
+<- sc_node_class;
+-> forward_direction;
+-> reverse_direction;;
+
+nrel_direction
+<- sc_node_norole_relation;;
+
+nrel_departure_time
+<- sc_node_norole_relation;;
+
+nrel_train
+<- sc_node_norole_relation;;
+
+
+priority
+<- sc_node_class;
+-> 1;
+-> 2;
+-> 3;
+-> 4;
+-> 5;
+-> 6;
+-> 7;
+-> 8;;
+
+nrel_priority
+<- sc_node_norole_relation;;
+
+nrel_max_time
+<- sc_node_norole_relation;;
+
+nrel_braking_time
+<- sc_node_norole_relation;;
+
+rrel_station
+<- sc_node_role_relation;;
