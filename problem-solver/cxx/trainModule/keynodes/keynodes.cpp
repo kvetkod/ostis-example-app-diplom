@@ -9,6 +9,7 @@
 namespace trainModule
 {
 ScAddr Keynodes::question_get_schedule;
+ScAddr Keynodes::question_analyze_forecast;
 ScAddr Keynodes::rrel_last;
 ScAddr Keynodes::nrel_arrived;
 ScAddr Keynodes::station;
@@ -36,4 +37,5 @@ ScAddr Keynodes::nrel_line;
 ScAddr Keynodes::nrel_direction;
 ScAddr Keynodes::nrel_max_time;
 ScAddr Keynodes::nrel_braking_time;
+ScAddr Keynodes::question_initiated;
 }  // namespace trainModule

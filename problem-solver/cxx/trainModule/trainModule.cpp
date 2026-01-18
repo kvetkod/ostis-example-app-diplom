@@ -7,6 +7,7 @@
 #include "trainModule.hpp"
 #include "keynodes/keynodes.hpp"
 #include "agents/GetTrainScheduleAgent.hpp"
+#include "agents/AnalyzeForecastScheduleAgent.hpp"
 
 using namespace trainModule;
 
@@ -18,12 +19,15 @@ sc_result TrainModule::InitializeImpl()
     return SC_RESULT_ERROR;
 
   SC_AGENT_REGISTER(GetTrainScheduleAgent)
+  SC_AGENT_REGISTER(AnalyzeForecastScheduleAgent)
   return SC_RESULT_OK;
 }
 
 sc_result TrainModule::ShutdownImpl()
 {
   SC_AGENT_UNREGISTER(GetTrainScheduleAgent)
+  SC_AGENT_UNREGISTER(AnalyzeForecastScheduleAgent)
+  
 
   return SC_RESULT_OK;
 }

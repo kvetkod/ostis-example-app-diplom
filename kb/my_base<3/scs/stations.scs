@@ -2,7 +2,7 @@ station_1
 => nrel_stop_time:
 	10 (* <- concept_time;; *);
 => nrel_braking_time: 
-	10 (* <- concept_time;; *);;
+	5 (* <- concept_time;; *);;
 	
 station_2
 => nrel_stop_time:
@@ -14,31 +14,31 @@ station_3
 => nrel_stop_time:
 	10 (* <- concept_time;; *);
 => nrel_braking_time: 
-	7 (* <- concept_time;; *);;
+	5 (* <- concept_time;; *);;
 	
 station_4
 => nrel_stop_time:
 	10 (* <- concept_time;; *);
 => nrel_braking_time: 
-	9 (* <- concept_time;; *);;
+	5 (* <- concept_time;; *);;
 	
 station_5
 => nrel_stop_time:
 	10 (* <- concept_time;; *);
 => nrel_braking_time: 
-	15 (* <- concept_time;; *);;
+	5 (* <- concept_time;; *);;
 	
 station_6
 => nrel_stop_time:
 	10 (* <- concept_time;; *);
 => nrel_braking_time: 
-	10 (* <- concept_time;; *);;
+	5 (* <- concept_time;; *);;
 	
 station_7
 => nrel_stop_time:
 	10 (* <- concept_time;; *);
 => nrel_braking_time: 
-	6 (* <- concept_time;; *);;
+	5 (* <- concept_time;; *);;
 	
 station_8
 => nrel_stop_time:
@@ -249,21 +249,7 @@ station_6
 (* 
 	<- sc_node_tuple;;
 	=> nrel_line:
-		line_6_2;;
-	=> nrel_train_type: passanger_train;;
-*);
--> ...
-(* 
-	<- sc_node_tuple;;
-	=> nrel_line:
 		line_6_3;;
-	=> nrel_train_type: cargo_train;;
-*);
--> ...
-(* 
-	<- sc_node_tuple;;
-	=> nrel_line:
-		line_6_4;;
 	=> nrel_train_type: cargo_train;;
 *);;
 	

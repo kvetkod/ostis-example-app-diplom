@@ -8,12 +8,8 @@ train_6
 actual_train_6
 -> rrel_previous:
 	train_6_at_station_8;
--> rrel_previous:
-	train_6_at_station_7;
--> rrel_previous:
-	train_6_at_station_6;
 -> rrel_last:
-	train_6_at_station_5;;
+	train_6_at_station_7;;
 
 
 train_6_at_station_8
@@ -28,20 +24,6 @@ train_6_at_station_7
 	station_7;
 => nrel_time:
 	8.40 (* <- concept_time;; *);;
-
-
-train_6_at_station_6
-=> nrel_arrived:
-	station_6;
-=> nrel_time:
-	9.15 (* <- concept_time;; *);;
-
-
-train_6_at_station_5
-=> nrel_arrived:
-	station_5;
-=> nrel_time:
-	9.50 (* <- concept_time;; *);;
 
 
 normative_train_6

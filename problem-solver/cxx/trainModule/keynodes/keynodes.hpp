@@ -22,6 +22,9 @@ public:
   SC_PROPERTY(Keynode("question_get_schedule"), ForceCreate)
   static ScAddr question_get_schedule;
 
+  SC_PROPERTY(Keynode("question_analyze_forecast"), ForceCreate)
+  static ScAddr question_analyze_forecast;
+
   SC_PROPERTY(Keynode("rrel_last"), ForceCreate)
   static ScAddr rrel_last;
 
@@ -102,6 +105,9 @@ public:
 
   SC_PROPERTY(Keynode("nrel_braking_time"), ForceCreate)
   static ScAddr nrel_braking_time;
+
+  SC_PROPERTY(Keynode("question_initiated"), ForceCreate)
+  static ScAddr question_initiated;
 };
 
 }  // namespace trainModule

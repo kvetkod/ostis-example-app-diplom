@@ -8,12 +8,8 @@ train_1
 
 // в отношение "rrel_previous" записываем все станции, которые проехал поезд, кроме последней, в rrel_last записываем последнюю
 actual_train_1
--> rrel_previous:
-	train_1_at_station_1;
--> rrel_previous:
-	train_1_at_station_3;
 -> rrel_last:
-	train_1_at_station_6;;
+	train_1_at_station_1;;
 
 
 // поезд 1 был на остановке 1 во время 08.02
@@ -23,21 +19,6 @@ train_1_at_station_1
 => nrel_time:
 	08.02 (* <- concept_time;; *);;
 
-
-// поезд 1 был на остановке 3 во время 08.37
-train_1_at_station_3
-=> nrel_arrived:
-	station_3;
-=> nrel_time:
-	08.37 (* <- concept_time;; *);;
-
-
-// поезд 1 был на остановке 6 во время 09.25
-train_1_at_station_6
-=> nrel_arrived:
-	station_6;
-=> nrel_time:
-	09.25 (* <- concept_time;; *);;
 
 
 // для нормативного расписания поезда 1 входят остановки по маршруту
@@ -90,7 +71,7 @@ train_1_at_station_6
 // на остановке 9 поезд 1 должен быть в 10.00
 train_1_at_station_9
 => nrel_normative_time:
-	10.00 (* <- concept_time;; *);
+	09.50 (* <- concept_time;; *);
 => nrel_station:
 	station_9;
 => nrel_priority: 7;

@@ -1,2 +1,3 @@
 add_subdirectory(exampleModule)
 add_subdirectory(trainModule)
+add_subdirectory(fixScheduleModule)

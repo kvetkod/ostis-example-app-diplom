@@ -218,3 +218,21 @@ nrel_braking_time
 
 rrel_station
 <- sc_node_role_relation;;
+
+forecast
+<- sc_node_class;;
+
+stack
+<- sc_node_class;;
+
+error_stop
+<- sc_node_class;;
+
+error_braking
+<- sc_node_class;;
+
+error_max_time
+<- sc_node_class;;
+
+temporary_schedule
+<- sc_node_class;;

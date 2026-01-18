@@ -16,7 +16,7 @@ track_1_1_3
 (*
 	<- sc_node_tuple;;
 	=> nrel_train_type: passanger_train;;
-	=> nrel_time: 33 (* <- concept_time;; *);;
+	=> nrel_time: 35 (* <- concept_time;; *);;
 	=> nrel_max_time: 45 (* <- concept_time;; *);;
 *);
 -> rrel_1: station_1;
@@ -28,7 +28,7 @@ track_1_3_6
 (*
 	<- sc_node_tuple;;
 	=> nrel_train_type: passanger_train;;
-	=> nrel_time: 45 (* <- concept_time;; *);;
+	=> nrel_time: 25 (* <- concept_time;; *);;
 	=> nrel_max_time: 65 (* <- concept_time;; *);;
 *);
 -> rrel_1: station_3;
@@ -40,7 +40,7 @@ track_1_6_9
 (*
 	<- sc_node_tuple;;
 	=> nrel_train_type: passanger_train;;
-	=> nrel_time: 40 (* <- concept_time;; *);;
+	=> nrel_time: 20 (* <- concept_time;; *);;
 	=> nrel_max_time: 60 (* <- concept_time;; *);;
 *);
 -> rrel_1: station_6;
@@ -52,7 +52,7 @@ track_1_9_12
 (*
 	<- sc_node_tuple;;
 	=> nrel_train_type: passanger_train;;
-	=> nrel_time: 38 (* <- concept_time;; *);;
+	=> nrel_time: 25 (* <- concept_time;; *);;
 	=> nrel_max_time: 55 (* <- concept_time;; *);;
 *);
 -> rrel_1: station_9;
@@ -64,7 +64,7 @@ track_1_12_14
 (*
 	<- sc_node_tuple;;
 	=> nrel_train_type: passanger_train;;
-	=> nrel_time: 35 (* <- concept_time;; *);;
+	=> nrel_time: 30 (* <- concept_time;; *);;
 	=> nrel_max_time: 50 (* <- concept_time;; *);;
 *);
 -> rrel_1: station_12;

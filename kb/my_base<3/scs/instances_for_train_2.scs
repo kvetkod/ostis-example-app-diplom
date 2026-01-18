@@ -10,10 +10,8 @@ actual_train_2
 	train_2_at_station_2;
 -> rrel_previous:
 	train_2_at_station_3;
--> rrel_previous:
-	train_2_at_station_5;
 -> rrel_last:
-	train_2_at_station_6;;
+	train_2_at_station_5;;
 
 
 // поезд 2 был на остановке 2 во время 08.12
@@ -39,13 +37,6 @@ train_2_at_station_5
 => nrel_time:
 	09.08 (* <- concept_time;; *);;
 
-
-// поезд 2 был на остановке 6 во время 09.33
-train_2_at_station_6
-=> nrel_arrived:
-	station_6;
-=> nrel_time:
-	09.33 (* <- concept_time;; *);;
 
 
 // для нормативного расписания поезда 2 входят остановки по маршруту
@@ -101,7 +92,7 @@ train_2_at_station_6
 	09.30 (* <- concept_time;; *);
 => nrel_station:
 	station_6;
-=> nrel_priority: 6;
+=> nrel_priority: 1;
 => nrel_direction:
 	forward_direction;;
 
@@ -125,7 +116,7 @@ train_2_at_station_12
 	10.50 (* <- concept_time;; *);
 => nrel_station:
 	station_12;
-=> nrel_priority: 8;
+=> nrel_priority: 1;
 => nrel_direction:
 	forward_direction;;
 
