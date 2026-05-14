@@ -112,6 +112,9 @@ void FinishAgent::CreateForecast(ScAddr info){
     station = resultInfo[0]["station"];
     time = resultInfo[0]["time"];
     type = resultInfo[0]["type"];
+    SC_LOG_ERROR(m_memoryCtx.HelperGetSystemIdtf(train));
+    SC_LOG_ERROR(m_memoryCtx.HelperGetSystemIdtf(station));
+    SC_LOG_ERROR(m_memoryCtx.HelperGetSystemIdtf(time));
   }
 
   ScTemplate findForecast;

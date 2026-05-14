@@ -101,7 +101,7 @@ train_2_at_station_6
 // на остановке 9 поезд 2 должен быть в 10.10
 train_2_at_station_9
 => nrel_normative_time:
-	10.10 (* <- concept_time;; *);
+	10.20 (* <- concept_time;; *);
 => nrel_station:
 	station_9;
 => nrel_priority: 3;

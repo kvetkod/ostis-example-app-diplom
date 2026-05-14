@@ -243,7 +243,7 @@ void ForecastingAgent::Forecast(ScAddr train, ScAddr lastInfo){
 
 void ForecastingAgent::CreateForecast(string time, ScAddr train, ScAddr station){
 
-    //clear forecast
+    //clear forecast ???
     ScAddr time_node = m_memoryCtx.HelperFindBySystemIdtf(time);
     if(!time_node.IsValid()){
         time_node = m_memoryCtx.CreateNode(ScType::NodeConst);

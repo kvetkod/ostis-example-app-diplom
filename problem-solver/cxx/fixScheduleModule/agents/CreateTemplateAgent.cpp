@@ -177,6 +177,7 @@ void CreateTemplateAgent::CreateTemplate(ScAddr train, ScAddr station, ScAddr ti
   ScTemplateGenResult resultCreateLast;
   m_memoryCtx.HelperGenTemplate(createLast, resultCreateLast);
   ScAddr empty = m_memoryCtx.CreateNode(ScType::NodeConst);
+
   ScTemplate startAgent;
 
   startAgent.Triple(

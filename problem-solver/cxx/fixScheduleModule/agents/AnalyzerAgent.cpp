@@ -67,8 +67,9 @@ void AnalyzerAgent::CheckStack(ScAddr forecast){
 
     ScTemplateGenResult resultAgent;
     m_memoryCtx.HelperGenTemplate(startAgent, resultAgent);
+    
   }
-  /*
+
   else{
     ScTemplate startAgent;
 
@@ -81,7 +82,6 @@ void AnalyzerAgent::CheckStack(ScAddr forecast){
     ScTemplateGenResult resultAgent;
     m_memoryCtx.HelperGenTemplate(startAgent, resultAgent);
   }
-    */
   return;
 }
 
@@ -134,9 +134,9 @@ void AnalyzerAgent::Analyze(ScAddr forecast){
       if(CheckCollision(station, train1, time1)){
         break;
       }
-      if(i == resultInfo.Size()-1){
+      //if(i == resultInfo.Size()-1){
         CreateTemporarySchedule(train1, station, time1);
-      }
+     // }
       stations.push_back(station);
       times.push_back(time1);
     }
